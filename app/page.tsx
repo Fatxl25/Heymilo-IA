@@ -269,7 +269,7 @@ interface AppUser {
     }
   };
 
-  const handleFastLogin = async (email = 'edinsonpc01@gmail.com', password = 'admin123') => {
+  const handleFastLogin = async (email = 'admin@heymilo.ai', password = 'admin123') => {
     setAuthEmail(email);
     setAuthPassword(password);
     setAuthError(null);
@@ -3509,7 +3509,7 @@ interface AppUser {
                 </div>
                 <button
                   type="button"
-                  onClick={() => handleFastLogin('edinsonpc01@gmail.com', 'admin123')}
+                  onClick={() => handleFastLogin('admin@heymilo.ai', 'admin123')}
                   disabled={authSubmitting}
                   className="w-full py-2.5 rounded-xl bg-zinc-950 hover:bg-zinc-800 border border-zinc-800 hover:border-purple-500/40 text-zinc-300 hover:text-white text-[11px] font-semibold transition flex items-center justify-center gap-2 cursor-pointer"
                 >

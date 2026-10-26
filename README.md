@@ -91,7 +91,8 @@ Antes de instalar, asegúrate de tener instalado en tu computadora:
 1. **Node.js 20 LTS o superior** ([Descargar](https://nodejs.org/))
 2. **Python 3.10 o superior** ([Descargar](https://www.python.org/))
 3. **FFmpeg** instalado y disponible en tu `PATH` del sistema.
-4. **Navegador Brave o Google Chrome** (para la autenticación inicial de Google Flow).
+4. **Navegador Brave o Google Chrome** (para la autenticación de sesión en Flow).
+5. **Cuenta de Google con suscripción Google AI Pro (Google One AI Premium)**: Requisito indispensable para tener acceso habilitado a **Google Flow** y a la cuota de generación de videos con **Veo 3.1 & Nano**.
 
 ---
 
@@ -125,10 +126,10 @@ Abre tu navegador en [http://localhost:3000](http://localhost:3000).
 ## 🎮 Cómo Usar la Plataforma
 
 1. **Iniciar Sesión:**
-   * La plataforma viene configurada con una cuenta **Administrador Master**:
-     * **Email:** `edinsonpc01@gmail.com`
+   * La plataforma permite registrar nuevos usuarios o utilizar la cuenta administrador por defecto:
+     * **Email:** `admin@heymilo.ai`
      * **Contraseña:** `admin123`
-   * Los nuevos visitantes pueden registrarse y acceder al creador activando su Pase Creador.
+   * Puedes personalizar las credenciales del administrador en tus variables de entorno o en `lib/db.ts`.
 
 2. **Escribir el Guion:**
    * En el panel central, escribe tu historia o escena (ej: *"Valentina entra al laboratorio secreto y descubre el holograma de Alejandro..."*).

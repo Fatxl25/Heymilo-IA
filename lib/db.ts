@@ -51,15 +51,16 @@ function ensureDataDir(): void {
   }
   if (!fs.existsSync(dbFilePath)) {
     // Inicializar con usuario Administrador por defecto con acceso completo y pagado
-    const defaultSalt = crypto.randomBytes(16).toString('hex');
-    const adminPasswordHash = hashPasswordWithSalt('admin123', defaultSalt);
+    const initialAdminEmail = process.env.ADMIN_EMAIL || 'admin@heymilo.ai';
+    const initialAdminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+    const adminPasswordHash = hashPasswordWithSalt(initialAdminPassword, defaultSalt);
 
     const initialData: DatabaseData = {
       users: [
         {
           id: 'admin_master',
-          email: 'edinsonpc01@gmail.com',
-          name: 'Edinson (Admin Master)',
+          email: initialAdminEmail,
+          name: 'Administrador Master',
           passwordHash: adminPasswordHash,
           salt: defaultSalt,
           createdAt: Date.now(),
@@ -76,7 +77,7 @@ function ensureDataDir(): void {
         {
           id: 'tx_init_admin',
           userId: 'admin_master',
-          userEmail: 'edinsonpc01@gmail.com',
+          userEmail: initialAdminEmail,
           amount: 5,
           currency: 'USD',
           description: 'Pase Creador Fundador Hey Milo',
