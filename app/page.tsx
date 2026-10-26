@@ -1470,7 +1470,7 @@ interface AppUser {
       )}
 
       {/* Main Studio Workspace */}
-      <div className="flex-1 max-w-[1600px] w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="flex-1 max-w-[1820px] w-full mx-auto p-4 md:p-6 lg:p-7 grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Side: Control Studio (5 cols) */}
         <div className="lg:col-span-5 flex flex-col gap-5">
           {/* Milo Interactive Status Banner */}
