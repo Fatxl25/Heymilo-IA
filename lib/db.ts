@@ -88,6 +88,32 @@ function ensureDataDir(): void {
       ],
     };
     fs.writeFileSync(dbFilePath, JSON.stringify(initialData, null, 2), 'utf-8');
+  } else {
+    try {
+      const raw = fs.readFileSync(dbFilePath, 'utf-8');
+      const data: DatabaseData = JSON.parse(raw);
+      const initialAdminEmail = process.env.ADMIN_EMAIL || 'admin@heymilo.ai';
+      const initialAdminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+      if (!data.users.some((u) => u.email.toLowerCase() === initialAdminEmail.toLowerCase())) {
+        const defaultSalt = crypto.randomBytes(16).toString('hex');
+        const adminPasswordHash = hashPasswordWithSalt(initialAdminPassword, defaultSalt);
+        data.users.unshift({
+          id: 'admin_master_default',
+          email: initialAdminEmail,
+          name: 'Administrador Master',
+          passwordHash: adminPasswordHash,
+          salt: defaultSalt,
+          createdAt: Date.now(),
+          hasPaid: true,
+          paidAt: Date.now(),
+          paidAmount: 5,
+          planName: 'Pase Creador VIP (Ilimitado)',
+          minutes: 999.0,
+          role: 'admin',
+        });
+        fs.writeFileSync(dbFilePath, JSON.stringify(data, null, 2), 'utf-8');
+      }
+    } catch {}
   }
 }
 
