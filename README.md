@@ -12,9 +12,9 @@
    - Diálogos y estados dinámicos que convierten el software en una experiencia de co-creación.
 
 2. **Modelo de Cobro por Minuto (Pay-Per-Minute):**  
-   - **Pack Creador Starter:** 15 Minutos de video ($9 USD / ~$0.60/min).
-   - **Pack Creador Pro:** 60 Minutos de video ($29 USD / ~$0.48/min) ⭐ Más Popular.
-   - **Pack Estudio Cine:** 180 Minutos de video ($79 USD / ~$0.43/min).
+   - **Pack Creador Starter:** 15 Minutos de video ($3 USD / ~$0.30/min).
+   - **Pack Creador Pro:** 60 Minutos de video ($6 USD / ~$0.10/min) ⭐ Más Popular.
+   - **Pack Estudio Cine:** 180 Minutos de video ($10 USD / ~$0.05/min).
    - Medición precisa: 1 escena de 8 segundos descuenta únicamente 0.13 minutos.
 
 3. **Motor Audiovisual de Alta Gama:**  
